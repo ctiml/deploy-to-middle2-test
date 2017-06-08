@@ -22,6 +22,10 @@
 		}
 	},
 	"addons": [
-    "pgsql"
+    "mysql",
+    {
+      "plan": "pgsql",
+      "as": "PGSQL_DATABASE_URL"
+    }
 	]
 }
