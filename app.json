@@ -24,7 +24,8 @@
 	"addons": [
     "mysql",
     {
-      "plan": "pgsql"
+      "plan": "pgsql",
+      "as": "PG_URL"
     }
 	]
 }
