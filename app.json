@@ -1,31 +1,29 @@
 {
-	"name": "DeployTest",
-	"description": "no desc",
-	"repository": "https://github.com/ctiml/deploy-to-middle2-test",
-	"keywords": [
-		"deploy",
-		"middle2"
-	],
-  "success_url": "/welcome.php",
-  "scripts": {
-    "postdeploy": "echo 'world' > /tmp/hello.txt"
+  "name": "DeployTest",
+  "description": "no desc",
+  "repository": "https://github.com/ctiml/deploy-to-middle2-test",
+  "keywords": [
+    "deploy",
+    "middle2"
+  ],
+  "env": {
+    "TITLE": {
+      "description": "test",
+      "value": "測試"
+    },
+    "FOO": {
+      "value": "bar"
+    }
   },
-	"env": {
-		"TITLE": {
-			"description": "test",
-			"value": "哈哈哈"
-		}
-	},
-	"formation": {
-		"web": {
-			"quantity": 1
-		}
-	},
-	"addons": [
-    "mysql",
+  "formation": {
+    "web": {
+      "quantity": 1
+    }
+  },
+  "addons": [
     {
       "plan": "pgsql",
       "as": "PG_URL"
     }
-	]
+  ]
 }
